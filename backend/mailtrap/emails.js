@@ -29,27 +29,27 @@ export const sendVerificationEmail = async (email, verificationToken) => {
   }
 };
 
-// export const sendWelcomeEmail = async (email, name) => {
-//   const recipient = [{ email }];
+export const sendWelcomeEmail = async (email, name) => {
+  const recipient = [{ email }];
 
-//   try {
-//     const response = await mailtrapClient.send({
-//       from: sender,
-//       to: recipient,
-//       template_uuid: "e65925d1-a9d1-4a40-ae7c-d92b37d593df",
-//       template_variables: {
-//         company_info_name: "Auth Company",
-//         name: name,
-//       },
-//     });
+  try {
+    const response = await mailtrapClient.send({
+      from: sender,
+      to: recipient,
+      template_uuid: "ad342215-f1c3-4106-b853-0ed25c2814ea",
+      template_variables: {
+        company_info_name: "Auth Company",
+        name: name,
+      },
+    });
 
-//     console.log("Welcome email sent successfully", response);
-//   } catch (error) {
-//     console.error(`Error sending welcome email`, error);
+    console.log("Welcome email sent successfully", response);
+  } catch (error) {
+    console.error(`Error sending welcome email`, error);
 
-//     throw new Error(`Error sending welcome email: ${error}`);
-//   }
-// };
+    throw new Error(`Error sending welcome email: ${error}`);
+  }
+};
 
 // export const sendPasswordResetEmail = async (email, resetURL) => {
 //   const recipient = [{ email }];
